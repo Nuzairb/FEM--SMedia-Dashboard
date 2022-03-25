@@ -1,4 +1,6 @@
-// Src: css-tricks-com/px-to-em-functions/@at-root
+@use "sass:math";
+
+// Source: https://css-tricks.com/snippets/sass/px-to-em-functions/
 @function rem($pixels, $context: 16) {
-    @return calc($pixels / $context) * 1rem;
+	@return (math.div($pixels, $context)) * 1rem;
 }
